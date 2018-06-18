@@ -4,6 +4,7 @@ import { Route, Switch, NavLink } from 'react-router-dom'
 import './App.css'
 import Github from './Github'
 import Homework from './Homework'
+import Poke from './Poke'
 
 class App extends Component {
   render() {
@@ -16,6 +17,9 @@ class App extends Component {
 
         <ul className="navLinks">
           <li>
+            <NavLink to="/poke">Poke</NavLink>
+          </li>
+          <li>
             <NavLink to="/github">GitHub</NavLink>
           </li>
           <li>
@@ -24,6 +28,7 @@ class App extends Component {
         </ul>
 
         <Switch>
+          <Route path="/poke" component={Poke} />
           <Route path="/github" component={Github} />
           <Route path="/homework" component={Homework} />
           <Route
